@@ -24,7 +24,7 @@ while(1):
    
 
 def GetUser():
-      return getpass. getuser()
+      return getpass. getuser()[0:5]
       
 changedir()      
 
