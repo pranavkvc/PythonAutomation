@@ -1,3 +1,4 @@
+#Here in this step the code checks all the required modules exist or not!
 import os,getpass
 def CheckRequiredModules():
     try:
@@ -7,7 +8,7 @@ def CheckRequiredModules():
     changedir()   
     
 
-  
+#This below code copies all the contents to required locations on your computer.
 def changedir():
    User_Name = GetUser()
    os.chdir('C:\\Users\\{}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs'.format(User_Name))
@@ -47,9 +48,4 @@ def GetUser():
       return getpass. getuser()[0:5]
       
 CheckRequiredModules()     
-
-
-
-    
-    
-   
+#End of the Code
