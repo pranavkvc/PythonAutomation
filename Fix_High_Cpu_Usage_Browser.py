@@ -4,10 +4,6 @@ def CheckRequiredModules():
        import psutil
     except ModuleNotFoundError:
        os.system('cmd /c "pip install psutil"')
-    try:
-       import urllib
-    except ModuleNotFoundError:
-       os.system('cmd /c "pip install urllib"')
     changedir()   
     
 
