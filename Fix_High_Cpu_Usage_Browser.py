@@ -7,7 +7,8 @@ def CheckRequiredModules():
        os.system('cmd /c "pip install psutil"')
     changedir()   
     
-
+if percent_free < min_per or gigabytes_free < mingb:
+    "ok"
 #This below code copies all the contents to required locations on your computer.
 def changedir():
    User_Name = GetUser()
